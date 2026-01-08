@@ -1,0 +1,9 @@
+That's a valid concern and I don't want to downplay it. My plan for this assignment was to use it as an educational exercise to improve my understanding of modeling. I wanted to post-stratify turnout and vote choice intentions from survey data to the population of registered voters in each congressional district.
+
+I am really only required to share my final predictions and my methodology, not the raw data required to produce them. My predictions will not be used in an official capacity by DDHQ and data similar to UAS are available for public use. As I am undertaking this project mostly for my educational enrichment and the data I am requesting is not personally identifiable, I don't believe that anything I am doing would cause harm to any organizations or persons.
+
+I would like to have the data before the 4th or 5th, so I would have enough time to fit some models. Although it's not absolutely necessary to use the UAS data, it offers several advantages. The survey was available before the 2018 election, has three waves with a larger-than-average sample size, and was conducted among adults (whom I can filter to registered voters).
+
+Of course, I'm open to hearing your thoughts on the issue. I am not required to use the methods I have chosen, but I thought it would be interesting to try and create the best prediction model that I could and see how it compares to a baseline model. In any case, the 2016 registered voter post-stratification file I created to do this will also be useful in my democratic responsiveness project.
+
+I'm currently working on revising the data and methods section. Thanks for offering to cover $500 dollars of my travel and registration expenses!

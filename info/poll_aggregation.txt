@@ -1,0 +1,69 @@
+
+NORC In Focus 2018, Not Considered (only WV, IL, and NV voters)
+
+
+----------------------------------------------------------------------
+2018 Midterm Elections Survey Wave 3, likely voters (adult likely voters)
+
+----------------------------------------------------------------------
+CBS News Oct 2018 Midterms
+-- Could not find vote intention question
+
+
+
+----------------------------------------------------------------------
+October 2018 AP-NORC, adult, N = 1152
+-- Could not find vote intention question
+
+
+----------------------------------------------------------------------
+ABC News/Washington Post: Congressional -- adult, N = 1144
+3. I'd like you to rate the chances that you will vote in the congressional election
+in your district next month: Are you absolutely certain to vote, will you probably
+vote, are the chances 50-50, or less than that?
+1 Absolutely certain to vote
+2 Will probably vote
+3 Chances 50-50
+4 Less than that
+5 (VOL) Don't think will vote
+6 (VOL) Already voted
+DK/No opinion
+NA/Refused
+
+
+----------------------------------------------------------------------
+Pew Research Center: American Trends Panel Wave 38 -- adult, N = 10000, vote intention question with binary option (Not Considered?)
+
+
+
+----------------------------------------------------------------------
+KFF Election Tracking Poll: Health Care in the 2018 Midterms -- adult, N = 1059, vote intention question 
+I’d like you to rate the chances that you will vote in the upcoming election in November:
+Are you absolutely certain to vote, will you probably vote, are the chances 50-50, or less than
+1 Absolutely certain to vote
+2 Probably vote
+3 Chances 50-50
+4 Less than that
+5 Don’t think will vote (VOL.)
+6 Already voted (VOL.)
+8 (DO NOT READ) Don't know
+9 (DO NOT READ) Refused
+
+
+----------------------------------------------------------------------
+UChicago Harris: Concerns about vulnerability --- adult, N = 1059, vote intention question 
+How likely are you to vote in the 2018 midterm elections this November?
+N= 1,059
+AP-NORC
+9/13-16/2018
+I will certainly/I will probably vote NET 73
+I will certainly vote 57
+I will probably vote 16
+I’m not sure if I will or will not vote 13
+I will probably not/I will certainly not vote
+NET 14
+I will probably not vote 6
+I will certainly not vote 
+
+
+

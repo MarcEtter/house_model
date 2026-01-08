@@ -1,0 +1,6 @@
+Ensemble - tree estimators - regressions
+-- gauge out of sample performance approaches --
+
+Election night --
+-- Based on vote actuals 
+-- Need to make predictions based on performance relative to expectations
