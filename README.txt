@@ -1,3 +1,19 @@
+This project is an evaluation of the merits of a particular implementation of Multilevel Regression and Post-stratification against a multiple linear regression for the purpose of predicting victory margins in the 2018 Midterm Elections. 
+
+For this project, I processed around 400 Gigabytes of the 2016 L2 voter file data, composed of one record for each of the 150+ million registered voters in the United States as of late September 2016. I used these data to enumerate the number of registered voters in every congressional district who fall into each combination of racial, gender, age, income, and political affiliation categories. 
+
+My final predictions derive from a weighted average of the MRP and linear regression models, which exceeds the solo-performance of both models. 
+
+------------------------------------------------------------------------------------------------
+
+To replicate the results, run the Rscripts in the following order:
+1) baseline_mod.R
+2) pew.R
+3) fit_vote_choice_mod.R #Optional: May take upwards of an hour to run
+4) fit_turnout_mod.R #Optional: May take upwards of an hour to run
+5) mrp_mod.R
+6) results.R
+
 The project directory is organized in the following way:
 
 ├── baseline_mod.R #R script to fit baseline multiple linear regression model
@@ -6,7 +22,7 @@ The project directory is organized in the following way:
 ├── fit_turnout_mod.R #brms model to predict whether a Pew respondent says they will vote
 ├── fit_vote_choice_mod.R #brms model to predict whom a Pew respondent says they will vote for
 ├── info 
-├── l2.R #R script to create post-stratification table from L2 (Need L2 access to run)
+├── l2.R #R script to create post-stratification table from 400GB's of L2 Data (Need L2 access to run)
 ├── models #fitted R models
 ├── mrp_mod.R #R script to compute MRP posterior draws
 ├── old
@@ -14,17 +30,9 @@ The project directory is organized in the following way:
 ├── results.R #R script to create final results and figures
 └── tables #Report tables
 
-To replicate results, run the Rscripts in the following order:
-1) baseline_mod.R
-2) pew.R
-3) fit_vote_choice_mod.R #Optional: May take upwards of an hour to run
-4) fit_turnout_mod.R #Optional: May take upwards of an hour to run
-5) mrp_mod.R
-6) results.R
-
 Full project directory structure:
 
-├── baseline_mod.R
+├── baseline_mod.R 
 ├── cleaned_data
 │   ├── 1976-2024-house.tab
 │   ├── FINAL_PREDICTION.csv
