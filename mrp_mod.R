@@ -17,12 +17,6 @@ poststrat_df <- read.csv(poststrat_file) |> select(-matches('X', ignore.case = F
 #To override predictions in uncontested races
 BASELINE_NO_CONTEST <- read.csv('cleaned_data/baseline_mod_predictions.csv')
 
-predictors <- str_extract_all(as.character(fit$formula), '(?<= )[a-zA-Z_]*(?=[)]| )')[[1]]
-#In order to speed up computation of posterior matrix, I compressed the post-stratification table 
-#to contain unique combinations of predictor values, to be merged with full table later
-POSTSTRAT_UNIQUE <- poststrat_df |> select(all_of(predictors)) |> unique()
-
-
 ################################################################################
 # Get matrix of posterior predictions (rows = posterior samples, cols = areas)
 mrp_posterior <- function(fit, poststrat, n_posterior_draws = 4000){
@@ -248,13 +242,24 @@ reweight_mrp <- function(mrp_array, margin_table){
 ########################################################
 #(1) Compute district turnout probabilities
 likely_voter_fit <- readRDS(likely_voter_model_file)
+predictors <- str_extract_all(as.character(likely_voter_fit$formula), '(?<= )[a-zA-Z_]*(?=[)]| )')[[1]]
+#In order to speed up computation of posterior matrix, I compressed the post-stratification table 
+#to contain unique combinations of predictor values, to be merged with full table later
+POSTSTRAT_UNIQUE <- poststrat_df |> select(all_of(predictors)) |> unique()
+
 likely_voter_posterior <- mrp_posterior(likely_voter_fit, POSTSTRAT_UNIQUE)[1:N_DRAWS, ]
 likely_voter_mrp <- bin_cont_mrp(posterior = likely_voter_posterior, 
                                  poststrat_full = poststrat_df)
 
+
 ########################################################
 #(2) District vote share estimates
 vote_choice_fit <- readRDS(vote_choice_model_file)
+predictors <- str_extract_all(as.character(likely_voter_fit$formula), '(?<= )[a-zA-Z_]*(?=[)]| )')[[1]]
+#In order to speed up computation of posterior matrix, I compressed the post-stratification table 
+#to contain unique combinations of predictor values, to be merged with full table later
+POSTSTRAT_UNIQUE <- poststrat_df |> select(all_of(predictors)) |> unique()
+
 vote_choice_posterior <- mrp_posterior(vote_choice_fit, POSTSTRAT_UNIQUE)[1:N_DRAWS, , ]
 mrp_list <- polytomous_mrp(posterior = vote_choice_posterior,
                                   poststrat_full = poststrat_df)
@@ -280,8 +285,8 @@ adj_vote_choice_posterior <- sweep(vote_choice_posterior, c(1, 2), likely_voter_
 mrp_list <- polytomous_mrp(posterior = adj_vote_choice_posterior,
                                       poststrat_full = poststrat_df)
 
-adj_vote_choice_array <- mrp_list2$mrp_array
-adj_vote_margin <- mrp_list2$margin_table
+adj_vote_choice_array <- mrp_list$mrp_array
+adj_vote_margin <- mrp_list$margin_table
 adj_vote_margin <- override_no_contest(adj_vote_margin)
 
 #Re-weight MRP estimates such that sum of vote shares across districts equal 

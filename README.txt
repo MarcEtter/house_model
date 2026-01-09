@@ -14,6 +14,14 @@ The project directory is organized in the following way:
 ├── results.R #R script to create final results and figures
 └── tables #Report tables
 
+To replicate results, run the Rscripts in the following order:
+1) baseline_mod.R
+2) pew.R
+3) fit_vote_choice_mod.R #Optional: May take upwards of an hour to run
+4) fit_turnout_mod.R #Optional: May take upwards of an hour to run
+5) mrp_mod.R
+6) results.R
+
 Full project directory structure:
 
 ├── baseline_mod.R
