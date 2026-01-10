@@ -1,6 +1,6 @@
 This project is an evaluation of the merits of a particular implementation of Multilevel Regression and Post-stratification against a multiple linear regression for the purpose of predicting victory margins in the 2018 Midterm Elections. 
 
-For this project, I processed around 400 Gigabytes of the 2016 L2 voter file data, composed of one record for each of the 150+ million registered voters in the United States as of late September 2016. I used these data to enumerate the number of registered voters in every congressional district who fall into each combination of racial, gender, age, income, and political affiliation categories. 
+For this project, I processed around 400 Gigabytes of the 2016 L2 voter file data, composed of one record for each of the 150+ million registered voters in the United States as of late September 2016. I used these data to enumerate the number of registered voters in every congressional district who fall into each combination of racial, gender, age, income, and political affiliation categories and post-stratify survey response patterns to the demographics of each congressional district.
 
 My final predictions derive from a weighted average of the MRP and linear regression models, which exceeds the solo-performance of both models. 
 
